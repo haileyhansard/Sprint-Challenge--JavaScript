@@ -18,7 +18,17 @@ myFunction();
 
 // Explanation: 
 
+nestedFunction can access the variable internal because of closure. 
+The child/inner function has access to variables from a higher level scope even after the variable has been called.
 
 /* Task 2: Counter */
 
 /* Create a function called `sumation` that accepts a parameter and uses a counter to return the summation of that number. For example, `summation(4)` should return 10 because 1+2+3+4 is 10. */
+
+let sumation = (function (){
+let counter = 0;
+console.log(function()){
+counter += 1; return counter}
+});
+
+console.log(sumation(4));
