@@ -47,8 +47,7 @@ Using filter, create a new array of objects called lowPopulationAnimals which co
 
 */
 const lowPopulationAnimals = zooAnimals.filter(animal => {
-  return animal.population < 5;}).map(animal => {
-  return animal.animal_name;
+  return animal.population < 5;
 });
   
 console.log(lowPopulationAnimals);
