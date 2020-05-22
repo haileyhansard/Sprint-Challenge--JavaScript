@@ -62,7 +62,10 @@ Remember the reduce method takes two arguments: a callback (which itself takes t
 
 */
 //use LET here instead per slack
-let populationTotal = 0;
+let populationTotal = zooAnimals.reduce(function(accumulator, element){
+  return accumulator + element.population;
+},0);
+ 
 console.log(populationTotal);
 
 
