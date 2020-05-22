@@ -23,10 +23,12 @@ Populate the displayNames array with only the animal_name and scientific_name of
 displayNames will be an array of strings, and each string should follow this pattern: "Name: Jackal, asiatic, Scientific: Canis aureus."
 
 */
-//AMOST THERE.. come back later!
+//AMOST THERE.. come back later! need to add the string wording
 
-zooAnimals.forEach(zooAnimal => console.log(zooAnimal.animal_name, zooAnimal.scientific_name));
 const displayNames = [];
+zooAnimals.forEach(function(element){
+  return displayNames.push(element.animal_name, element.scientific_name)
+})
 console.log(displayNames);
 
 /* Request 2: .map()
@@ -63,7 +65,7 @@ Remember the reduce method takes two arguments: a callback (which itself takes t
 */
 //use LET here instead per slack
 let populationTotal = zooAnimals.reduce(function(accumulator, element){
-  return accumulator + element.population;
+  return accumulator + element.population;${}
 },0);
  
 console.log(populationTotal);
