@@ -36,8 +36,10 @@ Using map, create a new array of strings named lowCaseAnimalNames, each string f
 
 */
 
-const lowCaseAnimalNames = [];
-zooAnimals.map(zooAnimal => lowerCase(zooAnimal.animal_name))
+const lowCaseAnimalNames = zooAnimals.map(function(item){
+  return item.animal_name.toLowerCase();
+});
+
 console.log(lowCaseAnimalNames);
 
 /* Request 3: .filter() 
