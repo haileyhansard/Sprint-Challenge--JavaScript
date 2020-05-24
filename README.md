@@ -26,13 +26,30 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
 
+'.map' is a function attached to an object that takes another function, runs that function on every element of the array, and returns a new array. When we run .map, it will leave our original array alone (unless we tell it otherwise).
+'.map' is considered cleaner code because it can have arguably less errors that writing out a for loop, and can be written with less code, too.
+'.forEach' will do the same thing as .map (loop over an array), but it doesn't return a new array. It will run the code inside of the loop over and over while some conditions are met that we have defined, and until a condition is met telling it to stop and return something new.
+
 2. Explain the difference between a callback and a higher order function.
+
+A callback is a function passed into another function as an argument, which is invoked inide the outer function to complete an action or "job". 
+In contrast, a higher order function is a function that operates on other functions, either by taking them as arguments or by returning them.
 
 3. What is closure?
 
+Closure is the ability for a child function or an inner function to access variables from a higher level scope even after the variables have been called or closed or termindated. Can be passed down, but not back up.
+To use a closure: Write a function that returns a 2nd function. Invoke the 1st function to return the 2nd function, and store that in a new variable. Now, invoke that new variable to invoke the 2nd function.
+
 4. Describe the four rules of the 'this' keyword.
 
+- Global binding: when in global scope, the value of "this" will be the window/console Object.
+- Implicit binding: when a preceding dot calls a function, the object before the dot (to the left of dot) is this.
+- New binding: has to do with constructor functions. This refers to the specific instance of the object that is created and returned by the constructor function.
+- Explicit binding: when we use call or apply methods, this is explicity defined becuase we are calling them explicitly with these functions (call and apply).
+
 5. Why do we need super() in an extended class?
+
+We need super() in an extended class because it applies the parent's methods to the child's attributes. 
 
 ### Task 1 - Project Set up
 
