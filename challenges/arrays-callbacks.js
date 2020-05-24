@@ -23,12 +23,11 @@ Populate the displayNames array with only the animal_name and scientific_name of
 displayNames will be an array of strings, and each string should follow this pattern: "Name: Jackal, asiatic, Scientific: Canis aureus."
 
 */
-//AMOST THERE.. come back later! need to add the string wording
 
 const displayNames = [];
 zooAnimals.forEach(function(element){
-  return displayNames.push(element.animal_name, element.scientific_name)
-})
+  return displayNames.push(`Name: ${element.animal_name}, Scientific: ${element.scientific_name}`)
+});
 console.log(displayNames);
 
 /* Request 2: .map()
