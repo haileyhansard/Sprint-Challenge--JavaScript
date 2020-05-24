@@ -1,7 +1,7 @@
 // ==== ADVANCED Array Methods ====
 
 // Given this zoo data from around the United States, follow the instructions below.  
-Use the specific array methods in the requests below to solve the problems.
+// Use the specific array methods in the requests below to solve the problems.
 
 const zooAnimals = [
   { animal_name: "Jackal, asiatic", population: 5, scientific_name: "Canis aureus", state: "Kentucky" },
@@ -64,8 +64,9 @@ Remember the reduce method takes two arguments: a callback (which itself takes t
 
 */
 //use LET here instead per slack
+
 let populationTotal = zooAnimals.reduce(function(accumulator, element){
-  return accumulator + element.population;${}
+  return accumulator + element.population;
 },0);
  
 console.log(populationTotal);
@@ -79,7 +80,10 @@ console.log(populationTotal);
   * The last parameter accepts a callback
   * The consume function should return the invocation of cb, passing a and b into cb as arguments
 */
-function consume(a,b,cb);
+
+let consume = function callback(a,b,cb){
+  return cb(a,b);
+};
 
 
 /* Step 2: Create several functions to callback with consume();
@@ -88,11 +92,27 @@ function consume(a,b,cb);
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
 
+function add(num1, num2){
+  return num1+num2;
+};
+
+console.log(add(2,2));
+
+function multiply(num3, num4){
+  return num3*num4;
+}
+
+console.log(multiply(10,16));
+
+function greeting(firstName, lastName){
+  return `Hello ${firstName} ${lastName}, nice to meet you!`;
+}
+console.log(greeting('Mary', 'Poppins'));
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-// console.log(consume(2, 2, add)); // 4
-// console.log(consume(10, 16, multiply)); // 160
-// console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
+console.log(consume(2, 2, add)); // 4
+console.log(consume(10, 16, multiply)); // 160
+console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
 
 
 
